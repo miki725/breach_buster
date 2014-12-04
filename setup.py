@@ -24,13 +24,12 @@ setup(
         'breach_buster/middleware/gzip',
         'breach_buster/examples/__init__',
         'breach_buster/examples/demo_server',
-        ],
+    ],
     packages=['breach_buster',],
     zip_safe=True,
     license='GPLv3',
     include_package_data=True,
     classifiers=[],
-    scripts=['scripts/breach_buster_demo_client','scripts/breach_buster_demo_server'], 
     tests_require=[
         'web.py'
     ]
