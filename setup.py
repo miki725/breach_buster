@@ -31,7 +31,7 @@ setup(
     include_package_data=True,
     classifiers=[],
     scripts=['scripts/breach_buster_demo_client','scripts/breach_buster_demo_server'], 
-    install_requires=[
+    tests_require=[
         'web.py'
-        ]
-    )
+    ]
+)
