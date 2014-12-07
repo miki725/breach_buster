@@ -2,8 +2,7 @@ from __future__ import absolute_import
 import re
 from gzip import GzipFile
 from random import Random
-from io import BytesIO
-from StringIO import StringIO
+from six import BytesIO, StringIO
 
 
 AVERAGE_SPAN_BETWEEN_FLUSHES = 512

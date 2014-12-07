@@ -30,7 +30,10 @@ setup(
     license='GPLv3',
     include_package_data=True,
     classifiers=[],
+    install_requires=[
+        'six',
+    ],
     tests_require=[
-        'web.py'
+        'web.py',
     ]
 )
