@@ -1,5 +1,6 @@
 from __future__ import absolute_import
 import re
+import six
 from gzip import GzipFile
 from random import Random
 from six import BytesIO, StringIO
@@ -65,7 +66,7 @@ def compress_string(s):
     else:
         avg_block_size = 1.0 / AVERAGE_SPAN_BETWEEN_FLUSHES
 
-    s = StringIO(s)
+    s = StringIO(s) if isinstance(s, six.text_type) else BytesIO(s)
     zbuf = BytesIO()
     zfile = GzipFile(mode='wb', compresslevel=6, fileobj=zbuf)
     chunk = s.read(MIN_INTERFLUSH_INTERVAL + int(rnd.expovariate(avg_block_size)))
