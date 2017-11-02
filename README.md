@@ -1,6 +1,8 @@
 BREACH_BUSTER
 =============
 
+This is a fork of [breach_buster](https://github.com/wnyc/breach_buster) with added Python 3 support.
+
 Django gzip middleware replacement that protects against SSL BREACH by
 randomizing the length of the compressed stream.
 
@@ -11,7 +13,7 @@ Usage
 
 Install breach buster
 
-    $ pip install breach_buster
+    $ pip install breach-buster-redux
 
 Open your settings.py file in an editor and modify it to
 
@@ -127,7 +129,7 @@ platform for script kiddies.
 
 Let's install breach_buster.
 
-`$ pip install breach_buster`
+`$ pip install breach-buster-redux`
 
 Now in one window let's open the breach buster web server.  It has two
 pages, /good and /bad.  Each contains a CSRF key called "CSRF" that
