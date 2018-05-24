@@ -135,6 +135,12 @@ class GZipMiddleware(object):
     It sets the Vary header accordingly, so that caches will base their storage
     on the Accept-Encoding header.
     """
+    def __init__(self, get_response=None):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        return self.process_response(request, self.get_response(request))
+
     def process_response(self, request, response):
         # It's not worth attempting to compress really short responses.
 

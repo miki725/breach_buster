@@ -12,9 +12,8 @@ from setuptools import setup
 
 setup(
     name='breach-buster-redux',
-    version='0.1',
-    author='Adam DePrince',
-    author_email='adeprince@nypublicradio.org',
+    version='0.1.1',
+    author='Miroslav Shubernetskiy',
     description='BREACH resistant gzip middleware for Django',
     url="https://github.com/miki725/breach_buster",
     long_description=__doc__,
